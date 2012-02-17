@@ -4,7 +4,7 @@
 
 ## Стварэньне сховішча Git ##
 
-Існуе два падыходы стварэньня сховішча Git. Першы — гэта імпартаваць існы праект ці тэчку ў Git. Другі — кланаваць існае сховішча Git зь іншага сэрвэра.
+Існуе два падыходы стварэньня сховішча Git. Першы — гэта імпартаваць існы праект ці тэчку ў Git. Другі — кланаваць існае сховішча Git зь іншага сэрвера.
 
 ### Ініцыялізацыя сховішча ў існай дырэкторыі ###
 
@@ -24,7 +24,7 @@
 
 ### Кланаваньне існага сховішча ###
 
-Калі вы жадаеце атрымаць копію існага сховішча Git, напрыклад праекта, які вы хочаце падтрымаць, то вам спатрэбіцца каманда `git clone`. Калі вам вядомы іншыя сыстэмы кіраваньня вэрсіямі, напрыклад Subversion, то вы заўважыце, што каманда называецца `clone`, а не `checkout`. Гэта важлівае адрозьненьне — Git атрымлівае паўнавартасную копію даньняў з сэрвэра. Кожная вэрсія кожнага файла сьцягваецца ў ваша сховішча, калі выконваецца каманда `git clone`. Фактычна, калі ваш сэрверны дыск зламаецца, то з дапамогай любога лякальнага сховішча любога кліента можна вярнуць сэрвер у стан, у якім быў зроблены клон дадзенага сховішча (вы, магчыма, згубіце частку сэрверных хукаў, але ўсе даньні, якія знаходзяцца пад вэрсійным кантролем, захаваюцца. Падрабязьней гл. *Главу 4*).
+Калі вы жадаеце атрымаць копію існага сховішча Git, напрыклад праекта, які вы хочаце падтрымаць, то вам спатрэбіцца каманда `git clone`. Калі вам вядомы іншыя сыстэмы кіраваньня вэрсіямі, напрыклад Subversion, то вы заўважыце, што каманда называецца `clone`, а не `checkout`. Гэта важлівае адрозьненьне — Git атрымлівае паўнавартасную копію даньняў з сэрвера. Кожная вэрсія кожнага файла сьцягваецца ў ваша сховішча, калі выконваецца каманда `git clone`. Фактычна, калі ваш сэрверны дыск зламаецца, то з дапамогай любога лякальнага сховішча любога кліента можна вярнуць сэрвер у стан, у якім быў зроблены клон дадзенага сховішча (вы, магчыма, згубіце частку сэрверных хукаў, але ўсе даньні, якія знаходзяцца пад вэрсійным кантролем, захаваюцца. Падрабязьней гл. *Главу 4*).
 
 Зклануйце сховішча загадам `git clone [url]`. Напрыклад, калі вы жадаеце атрымаць клон бібліятэкі Ruby Git - Grit, то зрабіце гэта наступным чынам:
 
@@ -36,7 +36,7 @@
 
 Гэтая каманда зробіць тое што й папярэдняя, але ў тэчцы `mygrit`.
 
-Git можа працаваць зь некалькімі транспартнымі пратаколамі. Папярэдні прыклад выкарыстоўваў пратакол `git://`. Таксама вы можаце пабачыць пратакол `http(s)://` і `user@server:/path.git`, які карыстаецца SSH пратаколам. *Глава 4* распавядзе пра ўсе даступныя опцыі сэрвэра для доступу да вашага Git-сховішча і прааналізуе плюсы і мінусы кожнага.
+Git можа працаваць зь некалькімі транспартнымі пратаколамі. Папярэдні прыклад выкарыстоўваў пратакол `git://`. Таксама вы можаце пабачыць пратакол `http(s)://` і `user@server:/path.git`, які карыстаецца SSH пратаколам. *Глава 4* распавядзе пра ўсе даступныя опцыі сэрвера для доступу да вашага Git-сховішча і прааналізуе плюсы і мінусы кожнага.
 
 ## Запіс зьменаў у сховішча ##
 
@@ -710,9 +710,9 @@ Insert 18333fig0202.png
 Каб мець магчымасьць сумеснай працы над якім-небудзь праектам, вам неабходна ведаць, як кіраваць аддаленымі сховішчамі. Аддаленыя сховішчы — гэта вэрсіі вашага праекту, якія захоўваюцца ў Інтэрнэце ці яшчэ дзе-небудзь у сетцы. Іх можа быць некалькі, кожнае зь якіх даступна вам ці толькі для чытаньня, ці для чытаньня й запісу. Супрацоўніцтва зь іншымі праграмістамі ўключае ў сябе кіраваньне гэтымі аддаленымі сховішчамі, даданьне й сьцягваньне даньняў зь іх, калі вы жадаеце падзяліцца вынікамі працы.
 Кіраваньне аддаленымі сховішчамі патрабуе наступных ведаў: дадаваць аддаленыя сховішчы, выдаляць тыя зь іх, якія больш не зьяўляюцца дзейнымі, кіраваць рознымі аддаленымі галінамі і вызначаць іх як адсочаныя ці не, і іншае. Гэты разьдзел зьмяшчае апісаньне гэтых "аддаленых" навыкаў.
 
-### Showing Your Remotes ###
+### Адлюстраваньне вашых аддаленых сховішчаў ###
 
-To see which remote servers you have configured, you can run the `git remote` command. It lists the shortnames of each remote handle you’ve specified. If you’ve cloned your repository, you should at least see *origin* — that is the default name Git gives to the server you cloned from:
+Каб убачыць, якія аддаленыя сэрверы вы ўжо наладзілі, вы можаце выканаць каманду `git remote`. Яна выводзіць сьпіс кароткіх імён кожнай пазначанай вамі спасылкі да аддаленага сховішча. Калі вы скланавалі ваша сховішча, то, як мінімум, пабачыце *origin* — гэта прадвызначанае імя Git дае сэрверу, зь якога праект быў скланаваны:
 
 	$ git clone git://github.com/schacon/ticgit.git
 	Initialized empty Git repository in /private/tmp/ticgit/.git/
@@ -725,12 +725,12 @@ To see which remote servers you have configured, you can run the `git remote` co
 	$ git remote
 	origin
 
-You can also specify `-v`, which shows you the URL that Git has stored for the shortname to be expanded to:
+Яшчэ вы можаце дадаць опцыю `-v`, якая, акрамя кароткага імя, адлюстроўвае URL, зь якога Git запампаваў сховішча:
 
 	$ git remote -v
 	origin	git://github.com/schacon/ticgit.git
 
-If you have more than one remote, the command lists them all. For example, my Grit repository looks something like this.
+Калі вы маеце больш за адну аддаленую спасылку, то гэтая каманда адлюструе іх усіх. Напрыклад, маё сховішча Grit выглядае прыкладна так:
 
 	$ cd grit
 	$ git remote -v
@@ -740,11 +740,11 @@ If you have more than one remote, the command lists them all. For example, my Gr
 	koke      git://github.com/koke/grit.git
 	origin    git@github.com:mojombo/grit.git
 
-This means we can pull contributions from any of these users pretty easily. But notice that only the origin remote is an SSH URL, so it’s the only one I can push to (we’ll cover why this is in *Chapter 4*).
+Гэта значыць, што сьцягваць укладаньні ад розных людзей вельмі проста. Але заўважце, што толькі першапачатковая (origin) спасылка — SSH URL, таму абнаўляць даньні вы можаце толькі ў адным аддаленым сховішчы (як гэта рабіць, вы пабачыце ў *Главе 4*).
 
-### Adding Remote Repositories ###
+### Даданьне аддаленага сховішча ###
 
-I’ve mentioned and given some demonstrations of adding remote repositories in previous sections, but here is how to do it explicitly. To add a new remote Git repository as a shortname you can reference easily, run `git remote add [shortname] [url]`:
+У папярэдніх разьдзелах, я ўжо прадэманстраваў некаторыя прыклады даданьня аддаленых сховішч, і зараз я растлумачу гэта больш дакладна. Каб дадаць новае аддаленае сховішча з скарочанай назвай, да якой будзе прасьцей зьвяртацца, выканайце `git remote add [shortname] [url]`:
 
 	$ git remote
 	origin
@@ -753,7 +753,7 @@ I’ve mentioned and given some demonstrations of adding remote repositories in 
 	origin	git://github.com/schacon/ticgit.git
 	pb	git://github.com/paulboone/ticgit.git
 
-Now you can use the string `pb` on the command line in lieu of the whole URL. For example, if you want to fetch all the information that Paul has but that you don’t yet have in your repository, you can run git fetch pb:
+Цяпер вы маеце магчымасьць выкарыстоўваць назву `pb` у загадным радку замест поўнага URL. Напрыклад, калі вы жадаеце сьцягнуць усе абнаўленьні, якія зрабіў Пол (Paul), і якіх вы яшчэ ня маеце ў вашым сховішчы, то запусьціце наступную каманду:
 
 	$ git fetch pb
 	remote: Counting objects: 58, done.
@@ -764,19 +764,19 @@ Now you can use the string `pb` on the command line in lieu of the whole URL. Fo
 	 * [new branch]      master     -> pb/master
 	 * [new branch]      ticgit     -> pb/ticgit
 
-Paul’s master branch is accessible locally as `pb/master` — you can merge it into one of your branches, or you can check out a local branch at that point if you want to inspect it.
+Галіна master з сховішча Пола даступна лякальна як `pb/master`. Вы можаце зьліць яе ў адну з вашых галін, ці зрабіць зь яе асобную лякальную галіну, калі вы жадаеце "пакапацца" ў ёй.
 
-### Fetching and Pulling from Your Remotes ###
+### Сьцягваньне і ўжываньне зьменаў з аддаленага сховішча ###
 
-As you just saw, to get data from your remote projects, you can run:
+Як вы толькі што ўбачылі, каб атрымаць даньні з аддаленага сховішча, трэба выканаць:
 
 	$ git fetch [remote-name]
 
-The command goes out to that remote project and pulls down all the data from that remote project that you don’t have yet. After you do this, you should have references to all the branches from that remote, which you can merge in or inspect at any time. (We’ll go over what branches are and how to use them in much more detail in *Chapter 3*.)
+Дадзеная каманда выходзіць на пазначаны аддалены праект і сьцягвае ўсе даньні, якія вы яшчэ ня маеце ў сваім сховішчы. Пасьля гэтага ў вас зьявяцца спасылкі на ўсе галіны аддаленага сховішча, якія вы можаце зьліваць з вашымі галінамі і праглядаць у любы момант. (Больш падрабязна мы распавядзём пра галіны і як іх выкарыстоўваць ў *Главе 3*).
 
-If you clone a repository, the command automatically adds that remote repository under the name *origin*. So, `git fetch origin` fetches any new work that has been pushed to that server since you cloned (or last fetched from) it. It’s important to note that the `fetch` command pulls the data to your local repository — it doesn’t automatically merge it with any of your work or modify what you’re currently working on. You have to merge it manually into your work when you’re ready.
+Калі вы скланавалі сховішча, то была аўтаматычна дададзена спасылка з назвай *origin*. Такім чынам `git fetch origin` сьцягвае ўсе новыя зьмены, якія былі захаваны на тым сэрверы ад часу кланаваньня (ці апошняга сьцягваньня). Важна разумець, што каманда `fetch` сьцягвае даньні ў ваша лякальнае сховішча, але не зьлівае іх з вашымі галінамі і не мадыфікуе тое, з чым вы на дадзены момант працуеце. Вы мусіце самастойна аб'яднаць гэтыя дадзеныя з вашай працай, калі будзеце падрыхтаваны.
 
-If you have a branch set up to track a remote branch (see the next section and *Chapter 3* for more information), you can use the `git pull` command to automatically fetch and then merge a remote branch into your current branch. This may be an easier or more comfortable workflow for you; and by default, the `git clone` command automatically sets up your local master branch to track the remote master branch on the server you cloned from (assuming the remote has a master branch). Running `git pull` generally fetches data from the server you originally cloned from and automatically tries to merge it into the code you’re currently working on.
+Калі ў вас ёсьць галіна, якая сочыць за аддаленай галіной (гл. наступны разьдзел і *Главу 3*), то вы можаце выкарыстаць каманду `git pull` для аўтаматычнага сьцягваньня й зьліцьця даньняў з аддаленай галіны ў бягучую. Гэта магчыма будзе больш проста і зручна для вас. Прадвызначана, каманда `git clone` аўтаматычна ўсталёўвае вашу лякальную галіну master для адсочваньня за аддаленай master-галіны на сэрверы зь якога вы скланавалі сховішча (мяркуючы, што аддаленая master-галіна існуе). Запуск `git pull`, як правіла, сьцягвае даньні з сэрвера, зь якога вы скланавалі праект, і аўтаматычна спрабуе зьліць іх з кодам, над якім вы цяпер працуеце.
 
 ### Pushing to Your Remotes ###
 
