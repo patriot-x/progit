@@ -764,7 +764,7 @@ Insert 18333fig0202.png
 	 * [new branch]      master     -> pb/master
 	 * [new branch]      ticgit     -> pb/ticgit
 
-Галіна master з сховішча Пола даступна лякальна як `pb/master`. Вы можаце зьліць яе ў адну з вашых галін, ці зрабіць зь яе асобную лякальную галіну, калі вы жадаеце "пакапацца" ў ёй.
+Галіна master з сховішча Пола дасяжна лякальна як `pb/master`. Вы можаце зьліць яе ў адну з вашых галін, ці зрабіць зь яе асобную лякальную галіну, калі вы жадаеце "пакапацца" ў ёй.
 
 ### Сьцягваньне і ўжываньне зьменаў з аддаленага сховішча ###
 
@@ -772,23 +772,23 @@ Insert 18333fig0202.png
 
 	$ git fetch [remote-name]
 
-Дадзеная каманда выходзіць на пазначаны аддалены праект і сьцягвае ўсе даньні, якія вы яшчэ ня маеце ў сваім сховішчы. Пасьля гэтага ў вас зьявяцца спасылкі на ўсе галіны аддаленага сховішча, якія вы можаце зьліваць з вашымі галінамі і праглядаць у любы момант. (Больш падрабязна мы распавядзём пра галіны і як іх выкарыстоўваць ў *Главе 3*).
+Дадзеная каманда выходзіць на пазначаны аддалены праект і сьцягвае ўсе даньні, якія вы яшчэ ня маеце ў сваім сховішчы. Пасьля гэтага ў вас зьявяцца спасылкі на ўсе галіны аддаленага сховішча, якія вы можаце зьліваць з вашымі галінамі і праглядаць у любы момант. (Больш падрабязна мы распавядзём пра галіны і як іх выкарыстоўваць у *Главе 3*).
 
 Калі вы скланавалі сховішча, то была аўтаматычна дададзена спасылка з назвай *origin*. Такім чынам `git fetch origin` сьцягвае ўсе новыя зьмены, якія былі захаваны на тым сэрверы ад часу кланаваньня (ці апошняга сьцягваньня). Важна разумець, што каманда `fetch` сьцягвае даньні ў ваша лякальнае сховішча, але не зьлівае іх з вашымі галінамі і не мадыфікуе тое, з чым вы на дадзены момант працуеце. Вы мусіце самастойна аб'яднаць гэтыя дадзеныя з вашай працай, калі будзеце падрыхтаваны.
 
 Калі ў вас ёсьць галіна, якая сочыць за аддаленай галіной (гл. наступны разьдзел і *Главу 3*), то вы можаце выкарыстаць каманду `git pull` для аўтаматычнага сьцягваньня й зьліцьця даньняў з аддаленай галіны ў бягучую. Гэта магчыма будзе больш проста і зручна для вас. Прадвызначана, каманда `git clone` аўтаматычна ўсталёўвае вашу лякальную галіну master для адсочваньня за аддаленай master-галіны на сэрверы зь якога вы скланавалі сховішча (мяркуючы, што аддаленая master-галіна існуе). Запуск `git pull`, як правіла, сьцягвае даньні з сэрвера, зь якога вы скланавалі праект, і аўтаматычна спрабуе зьліць іх з кодам, над якім вы цяпер працуеце.
 
-### Pushing to Your Remotes ###
+### Адсыланьне зьменаў у аддаленае сховішча ###
 
-When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple: `git push [remote-name] [branch-name]`. If you want to push your master branch to your `origin` server (again, cloning generally sets up both of those names for you automatically), then you can run this to push your work back up to the server:
+Калі ваш праект дасягае стадыі, што ўзьнікае жаданьне падзяліцца напрацоўкамі, вы мусіце адправіць вашыя даньні ў галоўнае сховішча. Каманда для гэтага вельмі простая: `git push [remote-name] [branch-name]`. Калі вы жадаеце дадаць вашую master-галіну на сэрвер `origin` (скажу яшчэ раз, што кланаваньне ўсталёўвае гэткія назвы аўтаматычна), то вы можаце выканаць наступнае:
 
 	$ git push origin master
 
-This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You’ll have to pull down their work first and incorporate it into yours before you’ll be allowed to push. See *Chapter 3* for more detailed information on how to push to remote servers.
+Гэта каманда адпрацуе толькі тады, калі вы скланавалі сваё сховішча з сэрвера, у якім вы маеце правы на запіс і між тым больш ніхто не пасьпеў выканаць каманду push. Калі вы і нехта яшчэ зрабілі клон ў адзін той жа час, і вы вырашылі загрузіць вашыя абнаўленьні пазьней за іх, то ваш запыт будзе адхілены. Вам будзе неабходна спачатку сьцягнуць іхныя даньні, аб'яднаць з вашымі, і толькі пасьля гэтага вы зможаце выканаць `push`. Для больш падрабязнай інфармацыі, як адпраўляць даньні ў аддаленае сховішча, зьвяртайцеся да *Главы 3*.
 
-### Inspecting a Remote ###
+### Вывучаем аддаленае сховішча ###
 
-If you want to see more information about a particular remote, you can use the `git remote show [remote-name]` command. If you run this command with a particular shortname, such as `origin`, you get something like this:
+Калі вы жадаеце ўбачыць больш інфармацыі пра пэўнае аддаленае сховішча, то вы можаце скарыстацца камандай `git remote show [remote-name]`. Калі вы запусьціце яе з скарочанай назвай сховішча, напрыклад origin, то пабачыце нешта на кшталт наступнага:
 
 	$ git remote show origin
 	* remote origin
@@ -799,9 +799,9 @@ If you want to see more information about a particular remote, you can use the `
 	    master
 	    ticgit
 
-It lists the URL for the remote repository as well as the tracking branch information. The command helpfully tells you that if you’re on the master branch and you run `git pull`, it will automatically merge in the master branch on the remote after it fetches all the remote references. It also lists all the remote references it has pulled down.
+Тут адлюстраваны URL аддаленага сховішча і інфармацыя пра адсочаныя галіны. Падказка тлумачыць што адбудзецца, калі вы выканаеце `git pull`. А адбудзецца аўтаматычнае зьліцьцё аддаленай master-галіны з лякальнай. Да таго ж, тут можна ўбачыць сьпіс ўсіх аддаленых спасылак, зь якіх ужываліся абнаўленьні.
 
-That is a simple example you’re likely to encounter. When you’re using Git more heavily, however, you may see much more information from `git remote show`:
+Гэта быў даволі просты прыклад. Калі вы выкарыстоўваеце Git больш інтэнсіўна, то, хутчэй за ўсё, вы ўбачыць значна больш інфармацыі:
 
 	$ git remote show origin
 	* remote origin
@@ -825,40 +825,40 @@ That is a simple example you’re likely to encounter. When you’re using Git m
 	  Local branch pushed with 'git push'
 	    master:master
 
-This command shows which branch is automatically pushed when you run `git push` on certain branches. It also shows you which remote branches on the server you don’t yet have, which remote branches you have that have been removed from the server, and multiple branches that are automatically merged when you run `git pull`.
+Гэтая каманда паказвае, якая менавіта галіна будзе адпраўлена на сэрвер, калі вы запускаеце `git push`. Таксама яна адлюстроўвае тыя галіны сэрвера, якіх у вас яшчэ няма, якія вы маеце, але былі выдалены з сэрвера, і сьпіс галін, у якія будуць зьліты даньні, калі вы выканаеце `git pull`.
 
-### Removing and Renaming Remotes ###
+### Выдаленьне й перайменаваньне спасылак на сховішчы ###
 
-If you want to rename a reference, in newer versions of Git you can run `git remote rename` to change a remote’s shortname. For instance, if you want to rename `pb` to `paul`, you can do so with `git remote rename`:
+Калі вы жадаеце перайменаваць спасылку, то ў новых вэрсіях Git вы можаце выканаць `git remote rename`. Напрыклад, каб зьмяніць `pb` на `paul`, неабходна запусьціць наступную каманду:
 
 	$ git remote rename pb paul
 	$ git remote
 	origin
 	paul
 
-It’s worth mentioning that this changes your remote branch names, too. What used to be referenced at `pb/master` is now at `paul/master`.
+Варта адзначыць, што гэта таксама зьмяняе назву галін аддаленага сховішча. Калі раней трэба было выкарыстоўваць `pb/master`, то зараз — `paul/master`.
 
-If you want to remove a reference for some reason — you’ve moved the server or are no longer using a particular mirror, or perhaps a contributor isn’t contributing anymore — you can use `git remote rm`:
+Калі вы хочаце выдаліць спасылку (магчыма вы зьмянілі сэрвер, ці больш не выкарыстоўваеце пэўнае люстэрка, ці хтосьці з удзельнікаў праекту перастаў ім займацца), то вы можаце скарыстацца камандай `git remote rm`:
 
 	$ git remote rm paul
 	$ git remote
 	origin
 
-## Tagging ##
+## Тэґаваньне ##
 
-Like most VCSs, Git has the ability to tag specific points in history as being important. Generally, people use this functionality to mark release points (`v1.0`, and so on). In this section, you’ll learn how to list the available tags, how to create new tags, and what the different types of tags are.
+Як і ў большасьці СКВ, Git мае магчымасьць адзначаць важныя моманты гісторыі праекту. Часьцей за ўсё іх выкарыстоўваюць для паметкі рэлізаў (`v1.0` і г.д.). У дадзеным разьдзеле вы даведаецеся як праглядзець сьпіс даступных тэґаў, як стварыць новыя і якія тыпы тэґаў існуюць.
 
-### Listing Your Tags ###
+### Прагляд вашых тэґаў ###
 
-Listing the available tags in Git is straightforward. Just type `git tag`:
+Праглядзець сьпіс даступных тэґаў вельмі лёгка. Проста надрукуйце `git tag`:
 
 	$ git tag
 	v0.1
 	v1.3
 
-This command lists the tags in alphabetical order; the order in which they appear has no real importance.
+Гэтая каманда адлюструе тэґі ў альфабэтным парадку. Парадак у якім тэґі ствараліся ня мае значэньня.
 
-You can also search for tags with a particular pattern. The Git source repo, for instance, contains more than 240 tags. If you’re only interested in looking at the 1.4.2 series, you can run this:
+Таксама можна шукаць тэґі з дапамогай шаблёнаў. Напрыклад, сховішча зыходных кодаў Git утрымлівае больш за 240 тэґаў. Калі вас цікавіць толькі вэрсія 1.4.2, вы можаце выканаць:
 
 	$ git tag -l 'v1.4.2.*'
 	v1.4.2.1
@@ -866,13 +866,13 @@ You can also search for tags with a particular pattern. The Git source repo, for
 	v1.4.2.3
 	v1.4.2.4
 
-### Creating Tags ###
+### Стварэньне тэґаў ###
 
-Git uses two main types of tags: lightweight and annotated. A lightweight tag is very much like a branch that doesn’t change — it’s just a pointer to a specific commit. Annotated tags, however, are stored as full objects in the Git database. They’re checksummed; contain the tagger name, e-mail, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG). It’s generally recommended that you create annotated tags so you can have all this information; but if you want a temporary tag or for some reason don’t want to keep the other information, lightweight tags are available too.
+Git выкарыстоўвае два асноўных тыпы тэґаў: легкаважны і анатаваны. Легкаважны тэґ вельмі падобны на галіну, якую нельга зьмяняць, — гэта проста паказальнік на пэўны каміт. У адрозьненьні ад яго, анатаваныя тэґі загружаюцца ў базу даньняў Git'а як паўнавартасныя аб'екты. Яны маюць кантрольную суму, імя стваральніка і яго пошту, дату, паведамленьне, і могуць быць падпісаны і правераны з дапамогай GNU Privacy Guard (GPG). Рэкамэндуецца захоўваць усю гэтую інфармацыю ў створаных тэґах, але калі вам патрэбны часовы тэґ, то лепш скарыстацца легкаважнымі тэґамі.
 
-### Annotated Tags ###
+### Анатаваныя тэґі ###
 
-Creating an annotated tag in Git is simple. The easiest way is to specify `-a` when you run the `tag` command:
+Стварыць анатаваны тэґ у Git не складана. Самы просты шлях — пазначыць `-a` у камандзе `tag`:
 
 	$ git tag -a v1.4 -m 'my version 1.4'
 	$ git tag
@@ -880,9 +880,9 @@ Creating an annotated tag in Git is simple. The easiest way is to specify `-a` w
 	v1.3
 	v1.4
 
-The `-m` specifies a tagging message, which is stored with the tag. If you don’t specify a message for an annotated tag, Git launches your editor so you can type it in.
+Опцыя `-m` адказвае за паведамленьне, якое будзе захавана разам з тэґам. Калі вы не пазначылі паведамленьне ў загадным радку, то Git адчыніць рэдактар, у якім вы можаце яго надрукаваць.
 
-You can see the tag data along with the commit that was tagged by using the `git show` command:
+Вы можаце пабачыць даньні тэґу разам з зьвесткамі пра каміт, на які тэґ спасылаецца, выкарыстаўшы каманду `git show`:
 
 	$ git show v1.4
 	tag v1.4
@@ -897,18 +897,18 @@ You can see the tag data along with the commit that was tagged by using the `git
 
 	    Merge branch 'experiment'
 
-That shows the tagger information, the date the commit was tagged, and the annotation message before showing the commit information.
+Тут мы бачым інфармацыю пра стваральніка тэґу, даньні адпаведнага каміту і паведамленьне над імі.
 
-### Signed Tags ###
+### Падпісаньне тэґаў ###
 
-You can also sign your tags with GPG, assuming you have a private key. All you have to do is use `-s` instead of `-a`:
+Вы можаце падпісаць вашыя тэґі пры дапамозе GPG (пры ўмове, што вы маеце прыватны ключ). Усё што вы мусіце зрабіць — замяніць опцыю `-a` на `-s`:
 
 	$ git tag -s v1.5 -m 'my signed 1.5 tag'
 	You need a passphrase to unlock the secret key for
 	user: "Scott Chacon <schacon@gee-mail.com>"
 	1024-bit DSA key, ID F721C45A, created 2009-02-09
 
-If you run `git show` on that tag, you can see your GPG signature attached to it:
+Калі вы запусьціце `git show` для гэтага тэґу, вы ўбачыце прымацаваны подпіс (signature):
 
 	$ git show v1.5
 	tag v1.5
@@ -930,11 +930,11 @@ If you run `git show` on that tag, you can see your GPG signature attached to it
 
 	    Merge branch 'experiment'
 
-A bit later, you’ll learn how to verify signed tags.
+Крыху пазьней, вы даведаецеся, як пацьвярджаць подпісы тэґаў.
 
-### Lightweight Tags ###
+### Легкаважныя тэґі ###
 
-Another way to tag commits is with a lightweight tag. This is basically the commit checksum stored in a file — no other information is kept. To create a lightweight tag, don’t supply the `-a`, `-s`, or `-m` option:
+Другі шлях пазначыць каміт — гэта легкаважны тэґ. Гэта звычайная кантрольная сума каміту запісаная ў файл, больш ніякай іншай інфармацыі. Каб стварыць легкаважны тэґ, ня трэба ўжываць опцыяў `-a`, `-s` і `-m`:
 
 	$ git tag v1.4-lw
 	$ git tag
@@ -944,7 +944,7 @@ Another way to tag commits is with a lightweight tag. This is basically the comm
 	v1.4-lw
 	v1.5
 
-This time, if you run `git show` on the tag, you don’t see the extra tag information. The command just shows the commit:
+На гэты раз, калі вы запусьціце `git show`, вы ня ўбачыце дадатковай інфармацыі пра тэґ. Каманда адлюструе толькі каміт:
 
 	$ git show v1.4-lw
 	commit 15027957951b64cf874c3557a0f3547bd83b3ff6
@@ -954,9 +954,9 @@ This time, if you run `git show` on the tag, you don’t see the extra tag infor
 
 	    Merge branch 'experiment'
 
-### Verifying Tags ###
+### Пацьверджаньне тэґаў ###
 
-To verify a signed tag, you use `git tag -v [tag-name]`. This command uses GPG to verify the signature. You need the signer’s public key in your keyring for this to work properly:
+Каб пацьвердзіць подпіс тэґу, трэба скарыстацца `git tag -v [tag-name]`. Гэта каманда з дапамогай GPG правярае подпіс. Каб гэта зрабіць правільна, вам патрэбны адкрыты ключ аўтара подпісу.
 
 	$ git tag -v v1.4.2.1
 	object 883653babd8ee7ea23e6a5c392bb739348b1eb61
@@ -972,15 +972,15 @@ To verify a signed tag, you use `git tag -v [tag-name]`. This command uses GPG t
 	gpg:                 aka "[jpeg image of size 1513]"
 	Primary key fingerprint: 3565 2A26 2040 E066 C9A7  4A7D C0C6 D9A4 F311 9B9A
 
-If you don’t have the signer’s public key, you get something like this instead:
+Калі вы ня маеце адкрытага ключа, то атрымаеце прыкладна наступны вывад:
 
 	gpg: Signature made Wed Sep 13 02:08:25 2006 PDT using DSA key ID F3119B9A
 	gpg: Can't check signature: public key not found
 	error: could not verify the tag 'v1.4.2.1'
 
-### Tagging Later ###
+### Выстаўленьне тэґу на пэўным каміце ###
 
-You can also tag commits after you’ve moved past them. Suppose your commit history looks like this:
+Вы можаце ствараць тэґі для камітаў, якія вы ўжо даўно прайшлі. Напрыклад, ваша гісторыя камітаў выглядае наступным чынам:
 
 	$ git log --pretty=oneline
 	15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'
@@ -994,11 +994,11 @@ You can also tag commits after you’ve moved past them. Suppose your commit his
 	964f16d36dfccde844893cac5b347e7b3d44abbc commit the todo
 	8a5cbc430f1a9c3d00faaeffd07798508422908a updated readme
 
-Now, suppose you forgot to tag the project at `v1.2`, which was at the "updated rakefile" commit. You can add it after the fact. To tag that commit, you specify the commit checksum (or part of it) at the end of the command:
+Цяпер уявім, што вы забылі адзначыць тэґам вэрсію `v1.2`, каміт якой называецца "updated rakefile". Але вы можаце зрабіць гэта й зараз. Каб стварыць тэґ, неабходна пазначыць кантрольную суму (ці яго частку) адпаведнага каміту напрыканцы каманды:
 
 	$ git tag -a v1.2 9fceb02
 
-You can see that you’ve tagged the commit:
+Можна паглядзець на адзначаны каміт:
 
 	$ git tag
 	v0.1
@@ -1021,9 +1021,9 @@ You can see that you’ve tagged the commit:
 	    updated rakefile
 	...
 
-### Sharing Tags ###
+### Агульнадаступныя тэґі ###
 
-By default, the `git push` command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them.  This process is just like sharing remote branches — you can run `git push origin [tagname]`.
+Прадвызначана, каманда `git push` не перасылае тэґі на аддаленыя сэрверы. Вы павінны самастойна адправіць тэґі на агульнадаступны сэрвер пасьля таго, як іх захаваеце. Гэта робіцца такім жа чынам, як і перасылка галін — трэба выканаць `git push origin [tagname]`.
 
 	$ git push origin v1.5
 	Counting objects: 50, done.
@@ -1033,7 +1033,7 @@ By default, the `git push` command doesn’t transfer tags to remote servers. Yo
 	To git@github.com:schacon/simplegit.git
 	* [new tag]         v1.5 -> v1.5
 
-If you have a lot of tags that you want to push up at once, you can also use the `--tags` option to the `git push` command.  This will transfer all of your tags to the remote server that are not already there.
+Калі ў вас шмат тэґаў, якія вы хочаце адаслаць разам, то скарыстайце опцыю `--tags`. Яна перашле на аддалены сэрвер ўсе вашыя тэґі, якіх там яшчэ няма.
 
 	$ git push origin --tags
 	Counting objects: 50, done.
@@ -1047,61 +1047,61 @@ If you have a lot of tags that you want to push up at once, you can also use the
 	 * [new tag]         v1.4-lw -> v1.4-lw
 	 * [new tag]         v1.5 -> v1.5
 
-Now, when someone else clones or pulls from your repository, they will get all your tags as well.
+Цяпер, калі нехта склануе ваша сховішча, то атрымае ўсе вашыя тэґі.
 
-## Tips and Tricks ##
+## Парады і хітрыкі ##
 
-Before we finish this chapter on basic Git, a few little tips and tricks may make your Git experience a bit simpler, easier, or more familiar. Many people use Git without using any of these tips, and we won’t refer to them or assume you’ve used them later in the book; but you should probably know how to do them.
+Перад тым як скончыць, распавяду пра некалькі маленькіх парадаў і хітрыкаў, якія зробяць выкарыстаньне Git больш простым і зручным. Шмат хто карыстаецца Git без гэтых магчымасьцяў, і далей у гэтай кнізе мы ня будзем спасылацца на іх ці лічыць, што вы іх ведаеце. Але ўсядно вам варта іх ведаць.
 
-### Auto-Completion ###
+### Самадавяршэньне ###
 
-If you use the Bash shell, Git comes with a nice auto-completion script you can enable. Download the Git source code, and look in the `contrib/completion` directory; there should be a file called `git-completion.bash`. Copy this file to your home directory, and add this to your `.bashrc` file:
+Калі вы карыстаецеся абалонкай Bash, то вы маеце магчымасьць уключыць скрыпт самадавяршэньня для Git. Спампуйце зыходны код Git і паглядзіце ў дырэкторыю `contrib/completion`. Там вы павінны ўбачыць файл з назвай `git-completion.bash`. Скапіюйце гэты файл у вашу хатнюю тэчку і дадайце ў ваш файл `.bashrc` наступны радок:
 
 	source ~/.git-completion.bash
 
-If you want to set up Git to automatically have Bash shell completion for all users, copy this script to the `/opt/local/etc/bash_completion.d` directory on Mac systems or to the `/etc/bash_completion.d/` directory on Linux systems. This is a directory of scripts that Bash will automatically load to provide shell completions.
+Калі вы жадаеце ўсталяваць самадавяршэньне Git для ўсіх карыстальнікаў, то скапіюйце гэты скрыпт у тэчку `/opt/local/etc/bash_completion.d` на Mac-сыстэмах, і `/etc/bash_completion.d/` на Linux. Гэта дырэкторыя з скрыптамі, якія Bash аўтаматычна чытае для падтрымкі самадавяршэньня.
 
-If you’re using Windows with Git Bash, which is the default when installing Git on Windows with msysGit, auto-completion should be preconfigured.
+Калі вы карыстаецеся Git Bash на Windows, які быў усталяваны разам з msysGit, то самадавяршэньне там працуе прадвызначана.
 
-Press the Tab key when you’re writing a Git command, and it should return a set of suggestions for you to pick from:
+Націсьніце на клявішу Tab, пасьля таго як вы напісалі частку каманды Git, і вам прапануюць некалькі верагодных варыянтаў каманд:
 
 	$ git co<tab><tab>
 	commit config
 
-In this case, typing `git co` and then pressing the Tab key twice suggests commit and config. Adding `m<tab>` completes `git commit` automatically.
+У дадзеным выпадку, пасьля каманды `git co` падвоены націск на Tab надрукуе вам дзьве магчымыя каманды `commit` і `config`. Калі вы дададзіце `m<tab>`, то будзе аўтаматычна давершана каманда `git commit`.
 
-This also works with options, which is probably more useful. For instance, if you’re running a `git log` command and can’t remember one of the options, you can start typing it and press Tab to see what matches:
+Самадавяршэньне таксама працуе для опцый, што можа быць яшчэ больш карысным. Напрыклад, калі вы запускаеце `git log` але дакладна ня памятаеце назву патрэбнай опцыі, то можна пачаць друкаваць яе, і Tab вам прапануе магчымыя варыянты:
 
 	$ git log --s<tab>
 	--shortstat  --since=  --src-prefix=  --stat   --summary
 
-That’s a pretty nice trick and may save you some time and documentation reading.
+Гэты вельмі прыемны хітрык можа вам захаваць крыху часу і неабходнасьць чытаць дакумэнтацыю.
 
-### Git Aliases ###
+### Псэўданімы Git ###
 
-Git doesn’t infer your command if you type it in partially. If you don’t want to type the entire text of each of the Git commands, you can easily set up an alias for each command using `git config`. Here are a couple of examples you may want to set up:
+Git не зразумее часткова надрукаваную каманду. Калі вы ня хочаце пісаць яе цалкам, то можна наладзіць схему скаротаў каманд з дапамогай `git config`. Тут мы прадэманструем некалькі прыкладаў, як вы можаце гэта зрабіць:
 
 	$ git config --global alias.co checkout
 	$ git config --global alias.br branch
 	$ git config --global alias.ci commit
 	$ git config --global alias.st status
 
-This means that, for example, instead of typing `git commit`, you just need to type `git ci`. As you go on using Git, you’ll probably use other commands frequently as well; in this case, don’t hesitate to create new aliases.
+Прыведзены прыклад кажа, што цяпер замест паўнавартаснай каманды `git commit`, напрыклад, можна проста надрукаваць `git ci`. На працягу карыстаньня Git'ам, у вас верагодна зьявяцца найбольш часта ўжываныя загады. У гэтым выпадку без сумневаў стварайце новы псэўданім.
 
-This technique can also be very useful in creating commands that you think should exist. For example, to correct the usability problem you encountered with unstaging a file, you can add your own unstage alias to Git:
+Гэта тэхніка таксама вельмі карысная ў стварэньні каманд, якія б вы хацелі мець. Напрыклад, каб выправіць нязручнасьць пры выдаленьні файла з прасторы індэксацыі, вы можаце дадаць наступны псэўданім:
 
 	$ git config --global alias.unstage 'reset HEAD --'
 
-This makes the following two commands equivalent:
+Цяпер наступныя дзьве каманды эквівалентныя:
 
 	$ git unstage fileA
 	$ git reset HEAD fileA
 
-This seems a bit clearer. It’s also common to add a `last` command, like this:
+Так выглядае больш зразумела. Яшчэ вельмі часта ствараюць каманду `last`:
 
 	$ git config --global alias.last 'log -1 HEAD'
 
-This way, you can see the last commit easily:
+Так можна хутка атрымаць і прагледзець апошні каміт:
 
 	$ git last
 	commit 66938dae3329c7aebe598c2246a8e6af90d04646
@@ -1112,10 +1112,10 @@ This way, you can see the last commit easily:
 
 	    Signed-off-by: Scott Chacon <schacon@example.com>
 
-As you can tell, Git simply replaces the new command with whatever you alias it to. However, maybe you want to run an external command, rather than a Git subcommand. In that case, you start the command with a `!` character. This is useful if you write your own tools that work with a Git repository. We can demonstrate by aliasing `git visual` to run `gitk`:
+Як вы можаце бачыць, Git проста замяняе новыя каманды на тое, што вы пазначылі ў наладках. Аднак, магчыма вы жадаеце запускаць зьнешнюю каманду, замест падкаманды Git. У такім выпадку, неабходна пачаць пісаць загад з клічніка `!`. Гэта можа спатрэбіцца, калі вы пішаце свае ўласныя інструмэнты для працы з сховішчам. Як прыклад, прадэманструем псэўданім `git visual` для запуску `gitk`.
 
 	$ git config --global alias.visual "!gitk"
 
-## Summary ##
+## Вынікі ##
 
-At this point, you can do all the basic local Git operations — creating or cloning a repository, making changes, staging and committing those changes, and viewing the history of all the changes the repository has been through. Next, we’ll cover Git’s killer feature: its branching model.
+Цяпер вы можаце рабіць усе базавыя лякальныя апэрацыі Git: ствараць і кланаваць сховішчы, рабіць зьмены, індэксаваць і фіксаваць іх, праглядаць гісторыю зьменаў. Далей, мы апішам самую забойную адметнасьць Git — яго мадэль галінаваньня.
